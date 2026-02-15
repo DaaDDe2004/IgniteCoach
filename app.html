@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IgniteCoach</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-fire"></i>
+                    <span>IgniteCoach</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-view="workouts">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Workouts</span>
+                </a>
+                <a href="#" class="nav-item" data-view="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="#" class="nav-item" data-view="nutrition">
+                    <i class="fas fa-utensils"></i>
+                    <span>Nutrition</span>
+                </a>
+                <a href="#" class="nav-item" data-view="coach">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Coach</span>
+                </a>
+                <a href="#" class="nav-item" data-view="community">
+                    <i class="fas fa-users"></i>
+                    <span>Community</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item" data-view="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search exercises, workouts...">
+                </div>
+                <div class="top-actions">
+                    <button class="icon-btn" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <div class="user-menu">
+                        <img src="https://via.placeholder.com/35x35/FF6B35/fff?text=U" alt="User" class="avatar">
+                        <span class="user-name">Alex Johnson</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Views -->
+            <div class="content-area">
+                <!-- Dashboard View -->
+                <div id="view-dashboard" class="view active">
+                    <div class="view-header">
+                        <h1>Good morning, Alex! 🔥</h1>
+                        <p>Ready to crush today's goals?</p>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #FF6B35;">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Current Streak</span>
+                                <span class="stat-value">12 days</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #4ECDC4;">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Workouts This Week</span>
+                                <span class="stat-value">4/5</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #45B7D1;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Volume This Week</span>
+                                <span class="stat-value">24,500 lbs</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #96CEB4;">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Personal Records</span>
+                                <span class="stat-value">3 this month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Grid -->
+                    <div class="dashboard-grid">
+                        <!-- Today's Workout -->
+                        <div class="card workout-card">
+                            <div class="card-header">
+                                <h3>Today's Workout</h3>
+                                <span class="badge-ai"><i class="fas fa-magic"></i> AI Generated</span>
+                            </div>
+                            <div class="workout-info">
+                                <h2>Upper Body Power</h2>
+                                <div class="workout-meta">
+                                    <span><i class="fas fa-clock"></i> 60 min</span>
+                                    <span><i class="fas fa-fire"></i> 450 cal</span>
+                                    <span><i class="fas fa-layer-group"></i> 6 exercises</span>
+                                </div>
+                            </div>
+                            <div class="exercise-list">
+                                <div class="exercise-item">
+                                    <div class="ex-check">
+                                        <input type="checkbox" checked>
+                                    </div>
+                                    <div class="ex-details">
+                                        <span class="ex-name">Barbell Bench Press</span>
+                                        <span class="ex-sets">4 sets × 8 reps @ 185 lbs</span>
+                                    </div>
+                                    <span class="ex-status done"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="exercise-item">
+                                    <div class="ex-check">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="ex-details">
+                                        <span class="ex-name">Overhead Press</span>
+                                        <span class="ex-sets">3 sets × 10 reps @ 115 lbs</span>
+                                    </div>
+                                    <span class="ex-status current">Current</span>
+                                </div>
+                                <div class="exercise-item">
+                                    <div class="ex-check">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="ex-details">
+                                        <span class="ex-name">Bent Over Rows</span>
+                                        <span class="ex-sets">4 sets × 8 reps @ 165 lbs</span>
+                                    </div>
+                                    <span class="ex-status pending">-</span>
+                                </div>
+                                <div class="exercise-item">
+                                    <div class="ex-check">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="ex-details">
+                                        <span class="ex-name">Incline Dumbbell Press</span>
+                                        <span class="ex-sets">3 sets × 12 reps @ 70 lbs</span>
+                                    </div>
+                                    <span class="ex-status pending">-</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="startWorkout()">
+                                <i class="fas fa-play"></i>
+                                Continue Workout
+                            </button>
+                        </div>
+
+                        <!-- Progress Chart -->
+                        <div class="card chart-card">
+                            <div class="card-header">
+                                <h3>Strength Progress</h3>
+                                <select class="chart-filter">
+                                    <option>Last 30 Days</option>
+                                    <option>Last 3 Months</option>
+                                    <option>Last Year</option>
+                                </select>
+                            </div>
+                            <canvas id="strengthChart"></canvas>
+                        </div>
+
+                        <!-- Weekly Schedule -->
+                        <div class="card schedule-card">
+                            <div class="card-header">
+                                <h3>This Week</h3>
+                                <button class="btn btn-ghost btn-sm">Edit Schedule</button>
+                            </div>
+                            <div class="week-grid">
+                                <div class="day-item completed">
+                                    <span class="day-name">Mon</span>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="day-workout">Leg Day</span>
+                                </div>
+                                <div class="day-item completed">
+                                    <span class="day-name">Tue</span>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="day-workout">Cardio</span>
+                                </div>
+                                <div class="day-item active">
+                                    <span class="day-name">Wed</span>
+                                    <i class="fas fa-dumbbell"></i>
+                                    <span class="day-workout">Upper Power</span>
+                                </div>
+                                <div class="day-item">
+                                    <span class="day-name">Thu</span>
+                                    <i class="fas fa-circle"></i>
+                                    <span class="day-workout">Rest Day</span>
+                                </div>
+                                <div class="day-item">
+                                    <span class="day-name">Fri</span>
+                                    <i class="fas fa-circle"></i>
+                                    <span class="day-workout">Pull Hypertrophy</span>
+                                </div>
+                                <div class="day-item">
+                                    <span class="day-name">Sat</span>
+                                    <i class="fas fa-circle"></i>
+                                    <span class="day-workout">Push Hypertrophy</span>
+                                </div>
+                                <div class="day-item">
+                                    <span class="day-name">Sun</span>
+                                    <i class="fas fa-circle"></i>
+                                    <span class="day-workout">Active Recovery</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Coach Quick Chat -->
+                        <div class="card coach-card">
+                            <div class="card-header">
+                                <h3>Quick Coach</h3>
+                                <span class="status-online"><i class="fas fa-circle"></i> Online</span>
+                            </div>
+                            <div class="chat-messages" id="quick-chat">
+                                <div class="message ai">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>Great job on that bench PR yesterday! Your form looked solid. Ready for today's overhead press?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" placeholder="Ask anything..." id="quick-chat-input">
+                                <button onclick="sendQuickMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Recent PRs -->
+                        <div class="card pr-card">
+                            <div class="card-header">
+                                <h3>Recent PRs 🏆</h3>
+                            </div>
+                            <div class="pr-list">
+                                <div class="pr-item">
+                                    <div class="pr-exercise">Bench Press</div>
+                                    <div class="pr-value">225 lbs × 5</div>
+                                    <div class="pr-date">2 days ago</div>
+                                </div>
+                                <div class="pr-item">
+                                    <div class="pr-exercise">Squat</div>
+                                    <div class="pr-value">315 lbs × 3</div>
+                                    <div class="pr-date">1 week ago</div>
+                                </div>
+                                <div class="pr-item">
+                                    <div class="pr-exercise">Deadlift</div>
+                                    <div class="pr-value">405 lbs × 1</div>
+                                    <div class="pr-date">2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Views (simplified for demo) -->
+                <div id="view-workouts" class="view">
+                    <h1>Workouts View</h1>
+                    <p>Generate new workouts, browse history, manage templates...</p>
+                </div>
+                <div id="view-progress" class="view">
+                    <h1>Progress View</h1>
+                    <p>Detailed analytics, body measurements, photo progress...</p>
+                </div>
+                <div id="view-nutrition" class="view">
+                    <h1>Nutrition View</h1>
+                    <p>Meal logging, macro tracking, meal plans...</p>
+                </div>
+                <div id="view-coach" class="view">
+                    <h1>AI Coach</h1>
+                    <p>Full chat interface with AI coach...</p>
+                </div>
+                <div id="view-community" class="view">
+                    <h1>Community</h1>
+                    <p>Challenges, leaderboards, social feed...</p>
+                </div>
+                <div id="view-settings" class="view">
+                    <h1>Settings</h1>
+                    <p>Profile, preferences, integrations, billing...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Workout Modal -->
+    <div id="workout-modal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>Upper Body Power</h2>
+                <button class="modal-close" onclick="closeWorkout()">&times;</button>
+            </div>
+            <div class="workout-timer">
+                <span id="session-timer">00:00:00</span>
+                <button class="btn btn-ghost" onclick="finishWorkout()">Finish Workout</button>
+            </div>
+            <div class="active-exercise">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/ai-coach.js"></script>
+</body>
+</html>

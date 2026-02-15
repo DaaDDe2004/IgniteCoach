@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgniteCoach - AI Fitness Coaching</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-fire"></i>
+                <span>IgniteCoach</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="app.html" class="btn btn-ghost">Log In</a>
+                <a href="#pricing" class="btn btn-primary">Get Started Free</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>AI-Powered Fitness Revolution</span>
+                </div>
+                <h1>Ignite Your Potential with <span class="gradient-text">AI-Powered</span> Fitness Coaching</h1>
+                <p class="hero-subtitle">Personalized workouts, real-time progress tracking, and expert guidance—tailored to your goals, schedule, and fitness level.</p>
+                <div class="hero-ctas">
+                    <a href="#pricing" class="btn btn-primary btn-large">
+                        Start Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button class="btn btn-ghost btn-large" onclick="openDemo()">
+                        <i class="fas fa-play-circle"></i>
+                        See How It Works
+                    </button>
+                </div>
+                <div class="hero-trust">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.9/5 from 10,000+ members</span>
+                    </div>
+                    <div class="featured-logos">
+                        <span>Featured in:</span>
+                        <img src="https://via.placeholder.com/100x30/333/fff?text=Men's+Health" alt="Men's Health">
+                        <img src="https://via.placeholder.com/100x30/333/fff?text=Women's+Fitness" alt="Women's Fitness">
+                        <img src="https://via.placeholder.com/100x30/333/fff?text=TechCrunch" alt="TechCrunch">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span>Today's Workout</span>
+                    </div>
+                    <div class="preview-content">
+                        <div class="workout-card">
+                            <div class="exercise-item">
+                                <div class="exercise-info">
+                                    <h4>Barbell Squat</h4>
+                                    <span>4 sets × 8 reps @ 185 lbs</span>
+                                </div>
+                                <div class="exercise-status completed">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-info">
+                                    <h4>Romanian Deadlift</h4>
+                                    <span>3 sets × 10 reps @ 135 lbs</span>
+                                </div>
+                                <div class="exercise-status current">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-info">
+                                    <h4>Walking Lunges</h4>
+                                    <span>3 sets × 12 reps each leg</span>
+                                </div>
+                                <div class="exercise-status pending">
+                                    <i class="fas fa-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-ring">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="progress-bg" cx="50" cy="50" r="45"/>
+                                <circle class="progress-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="70"/>
+                            </svg>
+                            <div class="progress-text">
+                                <span>67%</span>
+                                <small>Complete</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fas fa-fire"></i>
+                    <span>🔥 New PR!</span>
+                    <strong>Bench Press 225 lbs</strong>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Streak</span>
+                    <strong>12 Days</strong>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stat-item">
+                <i class="fas fa-trophy"></i>
+                <div>
+                    <span class="stat-number" data-target="50000">0</span>+
+                    <span class="stat-label">Workouts Completed</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-dumbbell"></i>
+                <div>
+                    <span class="stat-number" data-target="2000000">0</span>+
+                    <span class="stat-label">Pounds Lifted</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                    <span class="stat-number" data-target="85">0</span>%
+                    <span class="stat-label">Goal Achievement Rate</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-fire-alt"></i>
+                <div>
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">Day Streak Average</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution -->
+    <section class="problem-solution">
+        <div class="container">
+            <h2>Why Most Fitness Plans <span class="highlight">Fail</span></h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Generic Workouts</h3>
+                    <p>One-size-fits-all plans that don't account for your schedule, equipment, or fitness level</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>No Progress Visibility</h3>
+                    <p>Working hard but never sure if you're actually improving or just spinning your wheels</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Training Alone</h3>
+                    <p>No guidance when form breaks down, motivation dips, or life gets in the way</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Hitting Plateaus</h3>
+                    <p>Stuck at the same weights for months with no strategy to break through</p>
+                </div>
+            </div>
+            <div class="solution-arrow">
+                <i class="fas fa-arrow-down"></i>
+                <span>IgniteCoach Solves Everything</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2>Everything You Need to <span class="gradient-text">Transform</span></h2>
+                <p>Powerful tools that adapt to you, not the other way around</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card large">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Infinite AI Workouts</h3>
+                        <p>Our AI analyzes your goals, available equipment, time constraints, and recovery status to generate the perfect workout every single time.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Adapts to home, gym, or travel</li>
+                            <li><i class="fas fa-check"></i> Auto-adjusts difficulty based on feedback</li>
+                            <li><i class="fas fa-check"></i> Targets specific muscle groups</li>
+                            <li><i class="fas fa-check"></i> Balances intensity across the week</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="mockup-workout">
+                            <div class="mockup-header">AI Generated: Push Day</div>
+                            <div class="mockup-exercise">
+                                <span class="ex-name">Incline Bench Press</span>
+                                <span class="ex-detail">4×8 @ 165 lbs</span>
+                            </div>
+                            <div class="mockup-exercise">
+                                <span class="ex-name">Overhead Press</span>
+                                <span class="ex-detail">3×10 @ 115 lbs</span>
+                            </div>
+                            <div class="mockup-exercise">
+                                <span class="ex-name">Cable Flys</span>
+                                <span class="ex-detail">3×12 @ 50 lbs</span>
+                            </div>
+                            <div class="ai-badge">
+                                <i class="fas fa-magic"></i>
+                                Generated in 2.3s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Visual Progress Tracking</h3>
+                    <p>Beautiful charts and insights that show exactly how you're improving across strength, volume, consistency, and body composition.</p>
+                    <div class="mini-chart">
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 55%"></div>
+                        <div class="chart-bar" style="height: 45%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 65%"></div>
+                        <div class="chart-bar highlight" style="height: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>24/7 AI Coach Chat</h3>
+                    <p>Instant answers to any fitness question. Form checks, workout modifications, nutrition advice, or just motivation when you need it.</p>
+                    <div class="chat-preview">
+                        <div class="chat-bubble user">My shoulder hurts during bench</div>
+                        <div class="chat-bubble ai">Try narrowing your grip to reduce strain. Want me to suggest alternatives?</div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Smart Nutrition</h3>
+                    <p>Photo-based meal logging, macro tracking, and personalized meal plans that align with your training goals.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community & Challenges</h3>
+                    <p>Join monthly challenges, find accountability partners, and celebrate wins together.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Track workouts seamlessly at the gym with our mobile-first design. Offline mode supported.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Process</span>
+                <h2>How It <span class="gradient-text">Works</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Sign Up & Assess</h3>
+                        <p>2-minute quiz about your goals, experience, equipment, and schedule</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get Your Plan</h3>
+                        <p>AI instantly generates your personalized workout program</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Train & Log</h3>
+                        <p>Follow workouts, track progress, chat with your AI coach</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Adapt & Improve</h3>
+                        <p>AI analyzes your data weekly and optimizes your next phase</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-box">
+                <h2>Try the AI Workout Generator</h2>
+                <p>No signup required. See the magic in action.</p>
+                <div class="demo-inputs">
+                    <select id="demo-goal">
+                        <option value="strength">Build Strength</option>
+                        <option value="muscle">Build Muscle</option>
+                        <option value="fatloss">Lose Fat</option>
+                        <option value="endurance">Improve Endurance</option>
+                    </select>
+                    <select id="demo-equipment">
+                        <option value="gym">Full Gym</option>
+                        <option value="dumbbells">Dumbbells Only</option>
+                        <option value="home">Home Gym</option>
+                        <option value="bodyweight">Bodyweight Only</option>
+                    </select>
+                    <select id="demo-time">
+                        <option value="30">30 Minutes</option>
+                        <option value="45">45 Minutes</option>
+                        <option value="60">60 Minutes</option>
+                        <option value="90">90 Minutes</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="generateDemoWorkout()">
+                        <i class="fas fa-magic"></i>
+                        Generate Workout
+                    </button>
+                </div>
+                <div id="demo-result" class="demo-result hidden">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Success Stories</span>
+                <h2>Real People, <span class="gradient-text">Real Results</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card featured">
+                    <div class="testimonial-video">
+                        <img src="https://via.placeholder.com/400x250/333/fff?text=Video+Thumbnail" alt="Sarah's Story">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="results-badge">
+                            <span>Lost 40 lbs</span>
+                            <span>6 months</span>
+                        </div>
+                        <p>"I tried every app and program. IgniteCoach is the first one that actually adapted when my schedule got crazy. The AI coach kept me on track even when I could only train 20 minutes."</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/50x50/FF6B35/fff?text=S" alt="Sarah">
+                            <div>
+                                <strong>Sarah Mitchell</strong>
+                                <span>Busy Mom of 3, Age 34</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Broke through my 6-month plateau on bench press. The progression algorithm is smarter than most human coaches I've had."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50/4ECDC4/fff?text=M" alt="Mike">
+                        <div>
+                            <strong>Mike Chen</strong>
+                            <span>Software Engineer, Age 28</span>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Hit 405 lb deadlift PR</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Finally consistent for the first time in 20 years. The streak tracking and visual progress charts are weirdly addictive."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50/45B7D1/fff?text=L" alt="Lisa">
+                        <div>
+                            <strong>Lisa Rodriguez</strong>
+                            <span>Marketing Director, Age 45</span>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-fire"></i>
+                        <span>90-day streak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2>Choose Your <span class="gradient-text">Plan</span></h2>
+                <p>Start free. Upgrade when you're ready to unlock your full potential.</p>
+            </div>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label active" onclick="togglePricing('monthly')">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle" onchange="toggleBilling()">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label" onclick="togglePricing('yearly')">Yearly</span>
+                <span class="save-badge">Save 30%</span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Perfect for getting started</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic workout tracking</li>
+                        <li><i class="fas fa-check"></i> 5 AI-generated workouts/mo</li>
+                        <li><i class="fas fa-check"></i> Progress dashboard</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                        <li><i class="fas fa-check"></i> Mobile app access</li>
+                    </ul>
+                    <a href="app.html?plan=starter" class="btn btn-outline btn-full">Get Started Free</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p>For serious fitness enthusiasts</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount monthly">15</span>
+                        <span class="amount yearly hidden">10</span>
+                        <span class="period">/mo</span>
+                        <span class="yearly-price hidden">Billed annually ($120/year)</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <strong>Everything in Starter</strong></li>
+                        <li><i class="fas fa-check"></i> Unlimited AI workouts</li>
+                        <li><i class="fas fa-check"></i> Personalized coaching AI</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics & insights</li>
+                        <li><i class="fas fa-check"></i> Nutrition guidance & tracking</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="app.html?plan=pro" class="btn btn-primary btn-full">Start 14-Day Free Trial</a>
+                </div>
+
+                <!-- Elite -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Elite</h3>
+                        <p>Maximum results & support</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount monthly">30</span>
+                        <span class="amount yearly hidden">20</span>
+                        <span class="period">/mo</span>
+                        <span class="yearly-price hidden">Billed annually ($240/year)</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <strong>Everything in Pro</strong></li>
+                        <li><i class="fas fa-check"></i> 1-on-1 video coach sessions (2/mo)</li>
+                        <li><i class="fas fa-check"></i> Custom meal plans & recipes</li>
+                        <li><i class="fas fa-check"></i> Recovery & sleep optimization</li>
+                        <li><i class="fas fa-check"></i> VIP community & early features</li>
+                        <li><i class="fas fa-check"></i> Monthly fitness assessment calls</li>
+                    </ul>
+                    <a href="app.html?plan=elite" class="btn btn-outline btn-full">Start 14-Day Free Trial</a>
+                </div>
+            </div>
+
+            <div class="pricing-guarantee">
+                <i class="fas fa-shield-alt"></i>
+                <span>14-day free trial • Cancel anytime • 30-day money-back guarantee</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need gym equipment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not at all! Our AI adapts to whatever you have available. Choose from bodyweight-only, dumbbells, home gym, or full commercial gym setups. You'll get effective workouts regardless.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How is this different from free workout apps?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>True personalization. Most apps give everyone the same "chest day" routine. We analyze your progress, feedback, sleep, and schedule to generate unique workouts that evolve with you.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I cancel easily?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. One-click cancellation from your account settings. No phone calls, no retention hoops, no hassle. We believe in earning your business every month.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if I miss a workout?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Life happens! The AI automatically reschedules your week and adjusts volume to keep you on track. No guilt, no ruined progress—just smart adaptation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is my data private?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>100%. We never sell your data. You can export everything or delete your account completely at any time. We're GDPR and CCPA compliant.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer student/military discounts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer 40% off for students and military personnel. Contact support with your .edu email or military ID for verification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Ignite Your Transformation?</h2>
+                <p>Join 10,000+ members who stopped guessing and started growing.</p>
+                <a href="#pricing" class="btn btn-primary btn-large">
+                    Start Your Free 14-Day Trial
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="cta-features">
+                    <span><i class="fas fa-check-circle"></i> No credit card required</span>
+                    <span><i class="fas fa-check-circle"></i> Full feature access</span>
+                    <span><i class="fas fa-check-circle"></i> Cancel anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-fire"></i>
+                        <span>IgniteCoach</span>
+                    </a>
+                    <p>AI-powered fitness coaching for everyone. Train smarter, track better, transform faster.</p>
+                    <div class="app-badges">
+                        <img src="https://via.placeholder.com/120x40/333/fff?text=App+Store" alt="Download on App Store">
+                        <img src="https://via.placeholder.com/120x40/333/fff?text=Google+Play" alt="Get it on Google Play">
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="app.html">Web App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Exercise Library</a></li>
+                        <li><a href="#">Nutrition Guides</a></li>
+                        <li><a href="#">Form Videos</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IgniteCoach. All rights reserved.</p>
+                <p>Made with <i class="fas fa-fire"></i> for fitness enthusiasts</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDemo()">&times;</button>
+            <h2>See IgniteCoach in Action</h2>
+            <div class="video-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <p>Product Demo Video</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
